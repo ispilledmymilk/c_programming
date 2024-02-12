@@ -20,3 +20,4 @@ int main(){
         float interest = (principal*rate*days)/365;
         printf("interest $%f\n", interest);
     }
+}
