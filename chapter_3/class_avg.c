@@ -6,7 +6,7 @@ int main(){
     int counter = 0;
     
     while(counter<= 10){
-        printf("ENter your grade: ");
+        printf("Enter your grade: ");
         scanf("%d", &grade);
         total += grade;
         counter++;
