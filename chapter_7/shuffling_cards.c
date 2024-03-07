@@ -25,7 +25,7 @@ void deal(int deck[][FACES], const char *face[], const char *suit[]){
         for(size_t row = 0; row < SUITS; ++row){
             for(size_t column = 0; column < FACES; ++column){
                 if(deck[row][column] == card){
-                    printf("%5s of %-8s   %c", face[column], suit[row], card % 4 == 0 ? : '\0');
+                    printf("%5s of %-8s  %c\n", face[column], suit[row], card % 4 == 0 ? : '\0');
                 }
             }
         }
@@ -39,7 +39,7 @@ int main(){
     
     const char *suit[SUITS] = {"Hearts", "Diamonds", "Clubs", "Spades"};
     
-    const char *face[FACES] = {"Ace", "Deuce", "Three", "Four", "Five" "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+    const char *face[FACES] = {"Ace", "Deuce", "Three", "Four", "Five" , "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
     
     deal(deck, face, suit);
     
