@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int *max_arr(int a[], int n){
-    // max holds the value of the first element
+    // max holds the value of the first ele/ment
     int max = a[0];
     //res holds the address of the first element
     int *res = &a[0];
