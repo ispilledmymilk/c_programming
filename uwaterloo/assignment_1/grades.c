@@ -7,13 +7,10 @@ int main(){
     int f1 = 0;
     int f2 = 0;
     
-    printf("Enter the quiz grade: ");
     scanf("%d", &q);
     
-    printf("Enter the assignment: ");
     scanf("%d", &a);
     
-    printf("Enter the midterm grade: ");
     scanf("%d", &m);
     
     f1 = (1000 - q - 4*a - 6*m)/9;
