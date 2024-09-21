@@ -16,16 +16,16 @@ int main(){
     while(head < n){
         for ( int i = 0; i < n; i++){
             if (i == head){
-                printf(" H ");
+                printf("H");
             }
             else if(i >= head - length  && i <= head){
-                printf(" X ");
+                printf("X");
             }
             else if ( i % 2 == 1 && i >= head - length + 1 && i >= lastbaiteaten + 1){
-                printf(" . ");
+                printf(".");
             }
             else{
-                printf(" _ ");
+                printf("_");
             }
             
         }
