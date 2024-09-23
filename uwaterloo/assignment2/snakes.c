@@ -9,8 +9,7 @@ int main() {
         printf("Invalid input, n should be at least 5.\n");
         return 1;
     }
-
-    // Snake's initial configuration
+    
     int head = 4;   // Snake's head starts at position 3
     int length = 2; // Snake's body length starts at 2
     int baitEaten;  // Flag to track if bait was eaten at a position
