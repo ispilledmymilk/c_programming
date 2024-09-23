@@ -2,9 +2,7 @@
 
 int main() {
     int n;
-    
-    // Read the value of n, ensure n is at least 5
-   // printf("Enter the value of n (at least 5): ");
+
     scanf("%d", &n);
 
     if (n < 5) {
