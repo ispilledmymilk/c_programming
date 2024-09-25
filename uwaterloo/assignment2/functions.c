@@ -17,7 +17,7 @@ void square(int w) {
 }
 
 void spiral(int w){
-    int count = 0;
+    
     int i, j ,k, l;
     int m = 0;
     int x = 1;
@@ -25,7 +25,7 @@ void spiral(int w){
     int decre1 = 0;
     int incre2 = 0;
     int decre2 = 0;
-    int num = 0;
+    
     while(x <= w/2){
         for(i = m + 1; i < w + incre1; i++){
             printf("%d ", i);
