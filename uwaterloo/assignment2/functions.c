@@ -73,14 +73,3 @@ void rotation(int w){
 
 }
 
-
-int main(){
-    int a = 0;
-    scanf("%d", &a);
-    square(a);
-    printf("\n");
-    spiral(a);
-    printf("\n");
-    rotation(a);
-    printf("\n");
-}
