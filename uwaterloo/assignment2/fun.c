@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include "fun.h"
 
 int isSophieGermainPrime(int p){
     //dont know why it is printing twice
