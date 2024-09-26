@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "functions.h"
 
-
 void square(int w) {
     int count = 1;  // Start counting from 1
 
@@ -68,8 +67,24 @@ void rotation(int w){
         
         incre += w - 1;
         decre += w + 1;
+     }
+        if (w % 2 != 0) {
+        printf("%d ", w * w / 2 + 1);
+    }
+    printf("\n");
         
-}
+
 
 }
 
+
+/*int main(){
+    int a = 0;
+    scanf("%d", &a);
+    square(a);
+    printf("\n");
+    spiral(a);
+    printf("\n");
+    rotation(a);
+    printf("\n");
+}*/
