@@ -34,7 +34,7 @@ int base2nat(int bs, int num){
         power_of_base *= bs;           // Increase the power of the base for the next iteration
     }
     
-    printf("%d", decimal_value);
+    return decimal_value;
     
 }
 
@@ -56,8 +56,7 @@ int nat2base(int base, int num){
         num /= base;                     // Update the number by dividing by base
     }
 
-    int convert = result;
-    printf("%d", convert);
+    return result;
 }
 
 /*int main(){
