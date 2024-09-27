@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "functions.h"
+//#include "functions.h"
 
 
 void square(int w) {
@@ -58,7 +58,7 @@ void spiral(int w){
 
 
 void rotation(int w){
- /*  int i = 1, j = 0, x;
+    int i = 1, j = 0, x;
     int incre = 0;
     int decre = 0;
     int num = 0;
@@ -68,12 +68,13 @@ void rotation(int w){
     else{
         num = w/2 + 1;
     }
-    for( j = 1; j < num; j++){
+    while (j < num){
+        
         for(i = 1; i < w; i++){
             x = i;
             printf("%d ", x);
             printf("%d ", x = x + w - 1 + incre);
-            printf("%d ", x = x + (w*w) - w - decre);
+            printf("%d ", x = x + (w * w) - w - decre);
             printf("%d ", x = x - w + 1 - incre);
 
             incre += w - 1;
@@ -85,12 +86,12 @@ void rotation(int w){
        
    }
    printf("\n");
-   
+   j+=2;
       
 }
 }
+/*
 
-*/
 int topleft = 1;
 int topright = w;
 int bottomleft = (w - 1) * w + 1;
@@ -104,9 +105,9 @@ int counter = w - 1;
         int i = 0;
         while(i < counter){
             printf("%d ", topleft + i);
-            printf("%d ", topright + (i*w));
+            printf("%d ", topright + (i * w));
             printf("%d ", bottomright - i);
-            printf("%d ", bottomleft - (w*i));
+            printf("%d ", bottomleft - (w * i));
             i++;
         }
         
@@ -122,12 +123,12 @@ int counter = w - 1;
     }
     printf("\n");
 
-}
+}*/
 
 
 
 
-/*int main(){
+int main(){
    int a = 0;
    scanf("%d", &a);
    square(a);
@@ -136,7 +137,7 @@ int counter = w - 1;
    printf("\n");
    rotation(a);
    printf("\n");
-}*/
+}
 
 
 
