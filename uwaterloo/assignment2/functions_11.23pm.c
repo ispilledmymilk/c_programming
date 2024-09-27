@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <assert.h>
+#include "functions.h"
+
 
 void rotation(int w){
     int n = 0; // this is to find the number of layers
