@@ -3,12 +3,12 @@
 #include "fun.h"
 
 int isSophieGermainPrime(int p){
-    //dont know why it is printing twice
     int div = 2;
     int x = (2 * p )+ 1;
     
     if(p <= 1){
-       printf("false");
+      // printf("false");
+        return 0;
     }
     else{
         while ( div * div <= p){
@@ -19,59 +19,55 @@ int isSophieGermainPrime(int p){
         div++;
         }
         if(div * div <= p ){
-            printf("false");
-            //return 0;
+            //printf("false");
+            return 0;
         }
         else{
-            printf("true");
-            //return 1;
+            //printf("true");
+            return 1;
         }
     }
-}
+    }
 
 int base2nat(int bs, int num){
-    int value = 0;  
-    int power = 1;   
-    int digit;
+    int decimal_value = 0;  // To store the resulting decimal value
+    int power_of_base = 1;  // Start with bs^0 which is 1
     
-    
-    /*while (num > 0) {
-        int digit = num % 10;      
-        decimal_value += digit * power;  
-        num /= 10;                 
-        power *= bs;
+    // Loop until num becomes 0
+    while (num > 0) {
+        int digit = num % 10;          // Extract the last digit
+        decimal_value += digit * power_of_base;  // Convert the digit to its decimal equivalent
+        num /= 10;                     // Remove the last digit from num
+        power_of_base *= bs;           // Increase the power of the base for the next iteration
     }
     
-    printf("%d", decimal_value);*/
-    for(int n = num; n > 0; n/=10){
-        digit = n % 10;
-        value += digit * power;
-        power *= bs;
-        printf("%d", value);
-    }
+    return decimal_value;
     
 }
 
 int nat2base(int base, int num){
-    
+    // Handle the case when the number is zero
     if (num == 0) {
-        printf("0\n");
+        return 0;
     }
-    
-    int reversed = 0, count = 0, remaindr = 0;
 
+    int result = 0;   // Variable to store the final result
+    int place = 1;    // Keeps track of the place value (units, tens, hundreds, etc.)
+    int remainder;
+
+    // Process the number by repeatedly dividing by base
     while (num > 0) {
-        remaindr = num % base;         
-        reversed = reversed * 10 + remaindr; 
-        num /= base;                
+        remainder = num % base;          // Get the current digit
+        result = result + remainder * place;  // Add the digit to the result at the right place
+        place *= 10;                     // Move to the next place (next digit)
+        num /= base;                     // Update the number by dividing by base
     }
-    while (reversed > 0) {
-        printf("%d", reversed % 10);
-        reversed /= 10;                 
-    }
-    printf("\n"); 
+
+    return result;
 }
 
 /*int main(){
-    isSophieGermainPrime(13);
-} */
+    base2nat(7, 1);
+    printf("\n");
+    nat2base(5, 1659);
+}*/
