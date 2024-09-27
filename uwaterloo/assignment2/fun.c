@@ -1,144 +1,77 @@
 #include <stdio.h>
-//#include "functions.h"
+#include <assert.h>
+#include "fun.h"
 
-
-void square(int w) {
-   int count = 1;  // Start counting from 1
-
-
-   // Outer loop for each row
-   for (int i = 0; i < w; i++) {
-       // Inner loop for each column in the row
-       for (int j = 0; j < w; j++) {
-           printf("%d ", count);
-           count++;  // Move to the next number
-       }
-       printf("\n");  // Move to the next line after each row
-   }
-}
-
-
-void spiral(int w){
-  
-   int i, j ,k, l;
-   int m = 0;
-   int x = 1;
-   int incre1 = 0;
-   int decre1 = 0;
-   int incre2 = 0;
-   int decre2 = 0;
-  
-   while(x <= w/2){
-       for(i = m + 1; i < w + incre1; i++){
-           printf("%d ", i);
-       }
-       for(j = i; j < w*w - decre1; j+=w){
-           printf("%d ", j);
-       }
-      
-       for(k = j; k  > w*w - w - incre2; k--){
-           printf("%d ", k);
-       }
-       incre2 += (w - 1);
-       for(l = k - w + 1; l > w + decre2; l= l - w){
-           printf("%d ", l);
-           m = l;
-       }
-       x++;
-       incre1 += w - 1;
-       decre1 += w + 1;
-       decre2 += w + 1;
-     
-   }
-   if (w % 2 != 0) {
-       printf("%d ", w * w / 2 + 1);
-   }
-   printf("\n");
-}
-
-
-void rotation(int w){
- /*  int i = 1, j = 0, x;
-    int incre = 0;
-    int decre = 0;
-    int num = 0;
-    if(w % 2 == 0){
-        num = w/2;
+int isSophieGermainPrime(int p){
+    //dont know why it is printing twice
+    int div = 2;
+    int x = (2 * p )+ 1;
+    
+    if(p <= 1){
+       printf("false");
     }
     else{
-        num = w/2 + 1;
-    }
-    for( j = 1; j < num; j++){
-        for(i = 1; i < w; i++){
-            x = i;
-            printf("%d ", x);
-            printf("%d ", x = x + w - 1 + incre);
-            printf("%d ", x = x + (w*w) - w - decre);
-            printf("%d ", x = x - w + 1 - incre);
-
-            incre += w - 1;
-            decre += w + 1;
+        while ( div * div <= p){
+            if (p % div == 0 || x % div == 0){               
+                break;
+            }
             
-    }
-       if (w % 2 != 0) {
-       printf("%d ", w * w / 2 + 1);
-       
-   }
-   printf("\n");
-   
-      
-}
-}
-
-*/
-int topleft = 1;
-int topright = w;
-int bottomleft = (w - 1) * w + 1;
-int bottomright = w*w;
-
-int counter = w - 1;
-
-
-
-    while (topleft > 0 && topleft != topright){
-        int i = 0;
-        while(i < counter){
-            printf("%d ", topleft + i);
-            printf("%d ", topright + (i*w));
-            printf("%d ", bottomright - i);
-            printf("%d ", bottomleft - (w*i));
-            i++;
+        div++;
         }
-        
-        topleft = topleft + w + 1;
-        bottomleft = bottomleft - w + 1;
-        topright = topright + w - 1;
-        bottomright = bottomright - w - 1;
-        counter -= 2;
-        
-        if(w % 2 != 0){
-            printf("%d ", topright);
+        if(div * div <= p ){
+            printf("false");
+            //return 0;
+        }
+        else{
+            printf("true");
+            //return 1;
         }
     }
-    printf("\n");
-
 }
 
+int base2nat(int bs, int num){
+    int value = 0;  
+    int power = 1;   
+    int digit;
+    
+    
+    /*while (num > 0) {
+        int digit = num % 10;      
+        decimal_value += digit * power;  
+        num /= 10;                 
+        power *= bs;
+    }
+    
+    printf("%d", decimal_value);*/
+    for(int n = num; n > 0; n/=10){
+        digit = n % 10;
+        value += digit * power;
+        power *= bs;
+        printf("%d", value);
+    }
+    
+}
 
+int nat2base(int base, int num){
+    
+    if (num == 0) {
+        printf("0\n");
+    }
+    
+    int reversed = 0, count = 0, remaindr = 0;
 
+    while (num > 0) {
+        remaindr = num % base;         
+        reversed = reversed * 10 + remaindr; 
+        num /= base;                
+    }
+    while (reversed > 0) {
+        printf("%d", reversed % 10);
+        reversed /= 10;                 
+    }
+    printf("\n"); 
+}
 
 /*int main(){
-   int a = 0;
-   scanf("%d", &a);
-   square(a);
-   printf("\n");
-   spiral(a);
-   printf("\n");
-   rotation(a);
-   printf("\n");
-}*/
-
-
-
-
-
+    isSophieGermainPrime(13);
+} */
