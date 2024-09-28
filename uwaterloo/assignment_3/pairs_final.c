@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <assert.h>
 
 void numberPairsHelper(int n, int last_digit) {
     // Base case: if n is 0, stop the recursion
@@ -11,9 +12,8 @@ void numberPairsHelper(int n, int last_digit) {
     numberPairsHelper(n / 10, current_digit); // Recursion goes to the next digit
 
     // Print the current digit according to the rule
-    if (current_digit == last_digit) {
-        // Print the digit once if it's the same as the last
-    } else {
+    if (current_digit != last_digit) {
+        
         printf("%d%d", current_digit, current_digit); // Print the digit twice otherwise
     }
 }
@@ -24,6 +24,6 @@ void numberPairs(int n) {
 }
 
 /*int main() {
-    numberPairs(1234); // Example test case
+    numberPairs(123444); // Example test case
     return 0;
 }*/
