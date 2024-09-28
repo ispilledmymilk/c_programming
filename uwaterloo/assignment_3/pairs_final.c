@@ -23,7 +23,7 @@ void numberPairs(int n) {
     numberPairsHelper(n, -1);
 }
 
-int main() {
+/*int main() {
     numberPairs(1234); // Example test case
     return 0;
-}
+}*/
