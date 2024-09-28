@@ -1,25 +1,19 @@
 #include <stdio.h>
 
-int digit_Extraction(int num){
-    int y = 1;
-    while(num != 0){
-        int x = num % 10;
-        num = num / 10;
-        
-        printf("%d ", x);
-        
+int numberPairs(int n){
+    if(n % 10 == n){
+        printf("%d%d",n,n);
+        //return n;
     }
-}
-
-void numberPairs(int num){
-    int num2 = digit_Extraction(num);
-    while(num2 != 0){
-        int x = num2 % 10;
-        num2 = num2 / 10;
-        printf("%d ", x);
+    else if(n%10 < n){
+        
+        numberPairs(n/10);
+        
+        printf("%d%d", n%10, n%10);
     }
+    
 }
 
 int main(){
-    digit_Extraction(1234);
+    numberPairs(338888886);
 }
