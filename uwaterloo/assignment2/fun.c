@@ -7,18 +7,18 @@ int isSophieGermainPrime(int p){
     int x = (2 * p )+ 1;
     
     if(p <= 1){
-      // printf("false");
+       //printf("false");
         return 0;
     }
     else{
-        while ( div * div <= p){
+        while ( div * div <= (2*p + 1)){
             if (p % div == 0 || x % div == 0){               
                 break;
             }
             
         div++;
         }
-        if(div * div <= p ){
+        if(div * div <= (2*p + 1) ){
             //printf("false");
             return 0;
         }
@@ -67,7 +67,5 @@ int nat2base(int base, int num){
 }
 
 /*int main(){
-    base2nat(7, 1);
-    printf("\n");
-    nat2base(5, 1659);
+    isSophieGermainPrime(15);
 }*/
