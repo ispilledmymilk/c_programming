@@ -2,23 +2,20 @@
 #include <assert.h>
 #include "fun.h"
 
-int isSophieGermainPrime(int p){
-    int div = 1;
-    int x = (2 * p )+ 1;
+int isprime(int n){
+    int div = 2;
     
-    if(p <= 1){
+    if(n <= 1){
         //printf("false");
         return 0;
     }
     else{
-        while ( div * div <= (2*p + 1)){
-            if (p % div == 0 || x % div == 0){               
+        while ( div * div <= n){
+            if (n % div == 0)              
                 break;
-            }
-            
-        div++;
+            div++;
         }
-        if(div * div % (2*p + 1) == 0){
+        if(div * div <= n){
             //printf("falsex");
             return 0;
         }
@@ -26,6 +23,18 @@ int isSophieGermainPrime(int p){
             //printf("true");
             return 1;
         }
+    }
+}
+
+int isSophieGermainPrime(int p){
+    int x = 2*p + 1;
+    //printf("%d", isprime(x));
+    //printf("%d\n", isprime(p));
+    if(isprime(p) == 0 || isprime(x) == 0){
+        return 0;
+    }
+    else{
+        return 1;
     }
     }
 
@@ -68,4 +77,6 @@ int nat2base(int base, int num){
 
 /*int main(){
     isSophieGermainPrime(2);
-}*/
+    
+}
+*/
