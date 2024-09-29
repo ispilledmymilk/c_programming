@@ -3,11 +3,11 @@
 #include "fun.h"
 
 int isSophieGermainPrime(int p){
-    int div = 2;
+    int div = 1;
     int x = (2 * p )+ 1;
     
     if(p <= 1){
-       //printf("false");
+        //printf("false");
         return 0;
     }
     else{
@@ -18,8 +18,8 @@ int isSophieGermainPrime(int p){
             
         div++;
         }
-        if(div * div <= (2*p + 1) ){
-            //printf("false");
+        if(div * div % (2*p + 1) == 0){
+            //printf("falsex");
             return 0;
         }
         else{
@@ -67,5 +67,5 @@ int nat2base(int base, int num){
 }
 
 /*int main(){
-    isSophieGermainPrime(15);
+    isSophieGermainPrime(2);
 }*/
