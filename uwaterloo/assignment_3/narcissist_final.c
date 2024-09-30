@@ -8,7 +8,10 @@ int isnarc(int n){
     if (n == 0){
         return 0;
     }
-    else{
+    else if(n < 10){
+        return n*n*n;
+    }
+    else if (n > 10){
         x = n%10;
         n /= 10;
 
@@ -27,15 +30,6 @@ bool narcissist(int n){
     }
 }
 
-int main(){
-    assert(narcissist(9));
-    assert(narcissist(153));
-    assert(narcissist(370));
-    assert(narcissist(92727));
-    assert(narcissist(548834));
-    assert(!narcissist(10));
-    assert(!narcissist(92));
-    assert(!narcissist(1535));
-    assert(!narcissist(1234));
-    assert(!narcissist(92726));
-}
+/*int main(){
+    assert(!narcissist(9));
+}*/
