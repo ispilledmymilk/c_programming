@@ -8,10 +8,7 @@ int isnarc(int n){
     if (n == 0){
         return 0;
     }
-    else if(n < 10){
-        return n*n*n;
-    }
-    else if (n > 10){
+    else {
         x = n%10;
         n /= 10;
 
