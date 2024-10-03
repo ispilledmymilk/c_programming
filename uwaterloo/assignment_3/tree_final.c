@@ -2,20 +2,20 @@
 
 void tree_top(int n, int i, int z){
     
-    if(i == 2*n + 1){
+    if(i == (2 * n) + 1){
         printf("\n");
         return;
     }
     // n is the number of rows
-    if (i == 0 || i == (2*n)){
+    if (i == 0 || i == (2 * n)){
         printf(".");
     }
-    else if(n >= 2 && (i == n - z || i == n + z)){
+    else if(/*n >= 2 && */(i == n - z || i == n + z)){
         printf("+");
     } 
-    else if ( n < 2 && (i == n)){
+    /*else if ( n < 2 && (i == n)){
         printf("+");
-    }
+    }*/
     else{
         printf(" ");
     }
@@ -25,8 +25,8 @@ void tree_top(int n, int i, int z){
 // make another function for the multiples
 
 void tree_rows(int n, int count, int z){
-    if( count == 2){
-        tree_top(n, 0, z);
+    if( count == 1){
+        //tree_top(n, 0, z);
         return;
     }
     else{
@@ -112,9 +112,5 @@ void tree(int n){
 }
 
 /*int main(){
-    top_line(2, 0);
-    tree_rows(2, 2, 1);
-    middle_row(2, 0);
-    trunk_rows(2, 2);
-    
+    tree(2);
 }*/
