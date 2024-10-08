@@ -34,13 +34,13 @@ int removekdigits(long long int n, int k) {
             printf("%d", a[k - 1]);
         }
 
-    for(int i = 10; i < k - 1; --i){      
-        if(a[i] != 0){
-        printf("%d ", a[i]);
+    
+    
+    for(int j = 9; j >= k; --j){
+         if(a[j] != 0){
+            printf("%d", a[j]);
+        }
     }
 
     }
-
-}
-
 
