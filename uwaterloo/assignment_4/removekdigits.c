@@ -1,21 +1,49 @@
 #include <stdio.h>
+#include <assert.h>
 
-int array(long long int n, int c){
+int num_array(long long int n, int a[], int size ){
+    int i = 0;
     while(n != 0){
+        a[i] = n % 10;
         n /= 10;
-        c++;
-    }
-    
-    int numberarray[c];
-    c = 0;
-    
-    while(n != 0){
-        numberarray[c] = n % 10;
-        n /= 10;
-        c++;
+        i++;
     }
 }
 
+int bubble_sort(int a[]){
+
+    for(int pass = 0; pass < 10; ++pass){
+        for(size_t i = 0; i < 10 - 1; ++i){
+            if(a[i]>a[i - 1]){
+                int temp = a[i];
+                a[i] = a[i - 1];
+                a[i - 1] = temp;
+            }
+        }
+    }
+ 
+}
+
+int removekdigits(long long int n, int k) {
+    // first convert the number into an arrqay
+    int a[10];
+    num_array(n, a, 10);
+    bubble_sort(a);
+
+    if(a[k - 1] == 0){
+            printf("%d", a[k - 1]);
+        }
+
+    for(int i = 10; i < k - 1; --i){      
+        if(a[i] != 0){
+        printf("%d ", a[i]);
+    }
+
+    }
+
+}
+
 int main(){
-    array(4334, 0);
+    removekdigits(345267,3);
+    
 }
