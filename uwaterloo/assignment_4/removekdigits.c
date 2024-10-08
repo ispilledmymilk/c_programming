@@ -43,7 +43,3 @@ int removekdigits(long long int n, int k) {
 
 }
 
-int main(){
-    removekdigits(345267,3);
-    
-}
