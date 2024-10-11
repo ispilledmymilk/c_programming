@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main() {
-    int grade;                   // Store the current grade entered
+    int grade = 0;                   // Store the current grade entered
     int total_grades = 0;        // Total number of valid grades
     int failing_count = 0;       // Number of failing grades
     int sum = 0;                 // Sum of all grades
