@@ -15,7 +15,7 @@ int main() {
     double stddev = 0;
     int a[101] = {0};            // Array to count frequency of each grade
 
-    printf("Enter the grades: ");
+    //printf("Enter the grades: ");
     
     // Continuously read grades until a non-integer character is entered
     while (scanf("%d", &grade) == 1) {
