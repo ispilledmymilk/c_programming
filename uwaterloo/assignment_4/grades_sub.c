@@ -67,7 +67,7 @@ int main() {
     printf("The number of students who received the minimal grade is %d\n", count_min);
     printf("The course mean is: %.3f\n", average);
     printf("The standard deviation is: %.2f\n", stddev);
-    printf("The number of students who failed the course: %d\n", failing_count);
+    printf("The number of students who failed the course is: %d\n", failing_count);
 
     return 0;
 }
